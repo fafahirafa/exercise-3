@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker" rel="stylesheet">
+    <style>
+    .background{
+        background: url('image/bg.png');
+        background-size: cover;
+    }
+    
+    .table{
+        background: white;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 20px;
+        outline-style: hidden;
+    }
+
+    .table th{
+        text-align: center;
+    }
+
+    .search input{
+        width:30%;
+        height:40px;
+        padding-left: 10px;
+        font-size: 12pt;
+        border-radius: 20px;
+        margin: 0 10px;
+        border: 0;
+        transition: 0.5s;
+    }
+
+    .search input:focus{
+        outline: none;
+        padding-left: 15px;
+    }
+
+.btn{
+    height:40px;
+    border-radius: 30px;
+    font-size: 12pt;
+    outline: none;
+}
+
+.btn, .btn-success:{
+        outline: none;
+    }
+
+    </style>
+</head>
+<body class="background text-center">
+    <h1 style="font-family: 'Oswald', sans-serif; font-family: 'Permanent Marker', cursive;">The Planets</h1>
+    <table id="planet-list" class="table"></table>
+
+    <div class="search">
+        <h1 style="font-family: 'Oswald', sans-serif; font-family: 'Permanent Marker', cursive;">Find The Planet</h1>
+        <input type="text" name="cari-planet" id="search-keyword" placeholder="Search Planet's Name"/>
+        <button class="btn btn-success" type="submit"  onclick="onClickSearchResult()">Search</button>
+    </div>
+
+    <table class="table table-hover" id="search-results" style="margin: 10vh auto">
+    </table>
+
+    <script src="js/planet.js"></script>
+</body>
+</html>
